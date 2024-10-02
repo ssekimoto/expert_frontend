@@ -17,6 +17,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { Rotation, MonthlyRotation } from '../types/rotation'
 import { startOfWeek, addWeeks, format } from 'date-fns'
 import { ja } from 'date-fns/locale'
+import Link from 'next/link'  // 追加
 
 const theme = createTheme({
   palette: {
@@ -124,6 +125,12 @@ export default function RotationManagement() {
           <Typography variant="h4" component="h1" gutterBottom align="center" color="primary">
             ローテーション管理
           </Typography>
+          {/* ユーザー管理ページへのリンクを追加 */}
+          <Box textAlign="center" mb={4}>
+            <Button variant="outlined" component={Link} href="/users">
+              ユーザー管理へ
+            </Button>
+          </Box>
           <Box my={4} textAlign="center">
             <Typography variant="h5" component="h2" gutterBottom color="text.secondary">
               現在の担当者
