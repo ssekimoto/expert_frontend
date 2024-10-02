@@ -12,7 +12,8 @@ RUN npm install
 COPY . .
 
 # ビルド
-RUN npm run build
+ARG NEXT_PUBLIC_API_URL
+RUN NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL npm run build
 
 # Next.js アプリケーションを起動
 CMD ["npm", "start"]
