@@ -2,6 +2,7 @@
 /node_modules
 /.next
 /out
+.env.local
 
 # Ignore logs and npm debug files
 npm-debug.log*
